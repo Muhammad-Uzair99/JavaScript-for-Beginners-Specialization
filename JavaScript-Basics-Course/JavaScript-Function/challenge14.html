@@ -1,0 +1,40 @@
+<!--
+    For this challenge, update the hello() function 
+    so that it returns a value rather than outputs 
+    directly to the console.
+    Then outside the function write a call to the 
+    console that logs the greeting returned by the 
+    function.
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Challenges: Challenge 14</title>
+</head>
+<body>
+
+    <h1>JavaScript Challenges</h1>
+    <h2>Challenge 14</h2>
+
+    <script>
+
+        function hello(name){
+            // Checking if the input parameter is null or empty string
+            if (name === null || name == "") {
+                return "You didn't give me your name.";
+            } else {
+                return `Hello ${name}, and welcome!`;
+            }
+        }
+        // Asking user for user-name
+        let userName = prompt("Enter your name:", "");
+        // calling hello function and showing return value in the console
+        console.log(hello(userName));
+
+    </script>   
+</body>
+</html>
