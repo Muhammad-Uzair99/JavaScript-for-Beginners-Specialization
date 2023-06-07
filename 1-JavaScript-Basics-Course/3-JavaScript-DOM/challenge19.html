@@ -1,8 +1,8 @@
 <!--
-	For this challenge, write a script that gets the 
-	text inside the paragraph with the id set to 
-	"copyright" and use the color property to 
-	change the color of the text to green
+	For this challenge, assign the class of .red 
+    (which is already defined inside the style tags 
+    at the top of the page) to the <h1> in the 
+    header and to the date in the second article
 -->
 
 <!DOCTYPE html>
@@ -74,7 +74,11 @@
 		</footer>
 	</main>
 	<script>
-		
+		let heading = document.querySelector("header h1");
+        let date = document.querySelector("#two .date");
+        
+		heading.setAttribute("class", "red");
+        date.setAttribute("class", "red");
 	</script>
 </body>
 </html>

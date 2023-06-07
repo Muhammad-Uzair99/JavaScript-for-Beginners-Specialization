@@ -1,8 +1,8 @@
 <!--
-	For this challenge, write a script that gets the 
-	text inside the paragraph with the id set to 
-	"copyright" and use the color property to 
-	change the color of the text to green
+	For this challenge, get all the links, then check 
+    to see if one of them is set to go to the 
+    wikipedia page on llamas, if it is, set the text 
+    of that link to "Llamas are cool!"
 -->
 
 <!DOCTYPE html>
@@ -74,7 +74,13 @@
 		</footer>
 	</main>
 	<script>
-		
+		let linkEls = document.querySelectorAll("a");
+        for (let linkEl of linkEls) {
+            let link = linkEl.getAttribute("href");
+            if (link === "https://en.wikipedia.org/wiki/Llama") {
+                linkEl.innerText = "Llamas are cool!";
+            }
+        }
 	</script>
 </body>
 </html>

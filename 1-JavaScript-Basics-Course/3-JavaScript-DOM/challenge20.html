@@ -1,8 +1,9 @@
 <!--
-	For this challenge, write a script that gets the 
-	text inside the paragraph with the id set to 
-	"copyright" and use the color property to 
-	change the color of the text to green
+	For this challenge, change the src attribute for 
+    the first picture in the first article to: 
+    "http://meadpoint.net/images/xmasajax.jpg"
+    Also add the class "blue" to all the paragraphs 
+    in the second article.
 -->
 
 <!DOCTYPE html>
@@ -74,7 +75,13 @@
 		</footer>
 	</main>
 	<script>
-		
+		let firstPic = document.querySelector("#one p img");
+        let secParas = document.querySelectorAll("#two p");
+        
+		firstPic.setAttribute("src", "http://meadpoint.net/images/xmasajax.jpg");
+        for (let para of secParas) {
+            para.setAttribute("class", "blue");
+        }
 	</script>
 </body>
 </html>

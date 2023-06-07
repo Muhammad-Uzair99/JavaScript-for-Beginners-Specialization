@@ -1,8 +1,8 @@
 <!--
-	For this challenge, write a script that gets the 
-	text inside the paragraph with the id set to 
-	"copyright" and use the color property to 
-	change the color of the text to green
+	For this challenge, get all the paragraphs on 
+    the page, assign them to a variable, then use 
+    that variable in a loop to set the style.color 
+    property to green.
 -->
 
 <!DOCTYPE html>
@@ -74,7 +74,10 @@
 		</footer>
 	</main>
 	<script>
-		
+		let paragraphs = document.querySelectorAll("p");
+		for (let para of paragraphs) {
+            para.style.color = "green";
+        }
 	</script>
 </body>
 </html>
