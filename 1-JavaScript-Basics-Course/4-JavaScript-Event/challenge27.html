@@ -29,18 +29,21 @@
 
     <script>
 
-        let heading = document.querySelector("h1");
-        let subBtn = document.querySelector("#submit");
+        (function(){
+            "use strict";
+            const heading = document.querySelector("h1");
+            const subBtn = document.querySelector("#submit");
 
-        subBtn.addEventListener("click", (event) => {
-            event.preventDefault();
-            let num = parseInt(document.querySelector("#number").value);
-            if(num) {
-                heading.style.fontSize = `${num}px`;
-            } else {
-                alert("Please Enter a Positive Number");
-            }
-        });
+            subBtn.addEventListener("click", (event) => {
+                event.preventDefault();
+                const num = parseInt(document.querySelector("#number").value);
+                if(num) {
+                    heading.style.fontSize = `${num}px`;
+                } else {
+                    alert("Please Enter a Positive Number");
+                }
+            }); 
+        })();
         
     </script>
 

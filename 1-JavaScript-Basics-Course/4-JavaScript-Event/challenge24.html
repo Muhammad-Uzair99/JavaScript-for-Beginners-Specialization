@@ -25,15 +25,18 @@
 
     <script>
 
-        let divEl = document.querySelector("div");
-        let btn = document.querySelector("button");
-    
-        btn.addEventListener("click", () => {
-            let newParaTag = document.createElement("p");
-            let paraText = document.createTextNode("A new paragraph");
-            newParaTag.appendChild(paraText);
-            divEl.appendChild(newParaTag);
-        });
+        (function(){
+            "use strict";
+            const divEl = document.querySelector("div");
+            const btn = document.querySelector("button");
+        
+            btn.addEventListener("click", () => {
+                const newParaTag = document.createElement("p");
+                const paraText = document.createTextNode("A new paragraph");
+                newParaTag.appendChild(paraText);
+                divEl.appendChild(newParaTag);
+            });
+        })();
         
     </script>
 

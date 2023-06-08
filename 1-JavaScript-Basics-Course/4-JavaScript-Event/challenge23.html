@@ -22,14 +22,17 @@
 
     <script>
 
-        let paraEl = document.querySelectorAll("p");
-        let btn = document.querySelector("button");
+        (function(){
+            "use strict";
+            const paraEl = document.querySelectorAll("p");
+            const btn = document.querySelector("button");
 
-        btn.addEventListener("click", () => {
-            for(let para of paraEl) {
-                para.style.color = "red";
-            }
-        });
+            btn.addEventListener("click", () => {
+                for(let para of paraEl) {
+                    para.style.color = "red";
+                }
+            });
+        })();
         
     </script>
 

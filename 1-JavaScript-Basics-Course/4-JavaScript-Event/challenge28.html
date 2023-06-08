@@ -38,9 +38,12 @@
 
     <script>
 
-        let box = document.querySelector("div");
-        box.addEventListener("mouseover", () => box.setAttribute("class", "big"));
-        box.addEventListener("mouseout", () => box.removeAttribute("class"));
+        (function(){
+            "use strict";
+            const box = document.querySelector("div");
+            box.addEventListener("mouseover", () => box.setAttribute("class", "big"));
+            box.addEventListener("mouseout", () => box.removeAttribute("class"));
+        })();
         
     </script>
 

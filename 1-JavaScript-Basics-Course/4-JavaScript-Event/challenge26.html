@@ -9,7 +9,7 @@
     When the user clicks the remove 
     paragraph button, it functions as 
     normal, but alerts the user if they 
-    try to delete the last paragraph
+    try to deconste the last paragraph
 -->
 
 <!DOCTYPE html>
@@ -31,24 +31,27 @@
 
     <script>
 
-        let divEl = document.querySelector("div");
-        let addBtn = document.querySelector(".add-btn");
-        let rmvBtn = document.querySelector(".rmv-btn");
-        let num = 1;
+        (function(){
+            "use strict";
+            const divEl = document.querySelector("div");
+            const addBtn = document.querySelector(".add-btn");
+            const rmvBtn = document.querySelector(".rmv-btn");
+            let num = 1;
 
-        addBtn.addEventListener("click", () => {
-            let newParaTag = document.createElement("p");
-            let paraText = document.createTextNode(`This is paragraph number ${++num}.`);
-            newParaTag.appendChild(paraText);
-            divEl.appendChild(newParaTag);
-        });
+            addBtn.addEventListener("click", () => {
+                const newParaTag = document.createElement("p");
+                const paraText = document.createTextNode(`This is paragraph number ${++num}.`);
+                newParaTag.appendChild(paraText);
+                divEl.appendChild(newParaTag);
+            });
 
-        rmvBtn.addEventListener("click", () => {
-            let allParas = document.querySelectorAll("p");
-            divEl.removeChild(divEl.children[allParas.length - 1]);
-            alert("Deleting The Last Paragraph!");
-            num--;
-        });
+            rmvBtn.addEventListener("click", () => {
+                const allParas = document.querySelectorAll("p");
+                divEl.removeChild(divEl.children[allParas.length - 1]);
+                alert("Removing The Last Paragraph!");
+                num--;
+            });
+        })();
         
     </script>
 

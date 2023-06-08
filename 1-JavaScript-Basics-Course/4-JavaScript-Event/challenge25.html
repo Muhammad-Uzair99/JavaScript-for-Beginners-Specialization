@@ -25,21 +25,24 @@
 
     <script>
 
-        let divEl = document.querySelector("div");
-        let addBtn = document.querySelector(".add-btn");
-        let rmvBtn = document.querySelector(".rmv-btn");
+        (function(){
+            "use strict;"
+            const divEl = document.querySelector("div");
+            const addBtn = document.querySelector(".add-btn");
+            const rmvBtn = document.querySelector(".rmv-btn");
 
-        addBtn.addEventListener("click", () => {
-            let newParaTag = document.createElement("p");
-            let paraText = document.createTextNode("A new paragraph");
-            newParaTag.appendChild(paraText);
-            divEl.appendChild(newParaTag);
-        });
+            addBtn.addEventListener("click", () => {
+                const newParaTag = document.createElement("p");
+                const paraText = document.createTextNode("A new paragraph");
+                newParaTag.appendChild(paraText);
+                divEl.appendChild(newParaTag);
+            });
 
-        rmvBtn.addEventListener("click", () => {
-            let allParas = document.querySelectorAll("p");
-            divEl.removeChild(divEl.children[allParas.length - 1]);
-        });
+            rmvBtn.addEventListener("click", () => {
+                const allParas = document.querySelectorAll("p");
+                divEl.removeChild(divEl.children[allParas.length - 1]);
+            });
+        })();
         
     </script>
 

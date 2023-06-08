@@ -22,10 +22,12 @@
 
     <script>
 
-        let para = document.querySelector("p");
-        let btn = document.querySelector("button");
+        (function(){
+            const para = document.querySelector("p");
+            const btn = document.querySelector("button");
 
-        btn.addEventListener("click", () => para.style.color = "green");
+            btn.addEventListener("click", () => para.style.color = "green");
+        })();
         
     </script>
 

@@ -32,23 +32,26 @@
 
     <script>
 
-        let scrollPix;
-        let body = document.querySelector("body");
+        (function(){
+            "use strict";
+            let scrollPix;
+            const body = document.querySelector("body");
 
-        window.addEventListener("scroll", () => {
-            scrollPix = window.pageYOffset;
-            switch (true) {
-                case scrollPix < 500: body.className = "one";
-                break;
-                case scrollPix < 1000: body.className = "two";
-                break;
-                case scrollPix < 1500: body.className = "three";
-                break;
-                case scrollPix < 2000: body.className = "four";
-                break;
-                dafault: body.className = "five";
-            }
-        });
+            window.addEventListener("scroll", () => {
+                scrollPix = window.pageYOffset;
+                switch (true) {
+                    case scrollPix < 500: body.className = "one";
+                    break;
+                    case scrollPix < 1000: body.className = "two";
+                    break;
+                    case scrollPix < 1500: body.className = "three";
+                    break;
+                    case scrollPix < 2000: body.className = "four";
+                    break;
+                    dafault: body.className = "five";
+                }
+            });
+        })();
         
     </script>
 

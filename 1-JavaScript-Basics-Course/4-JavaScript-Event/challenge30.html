@@ -36,25 +36,28 @@
 
     <script>
 
-        let keyPress;
-        let body = document.querySelector("body");
+        (function(){
+            "use strict";
+            let keyPress;
+            const body = document.querySelector("body");
 
-        document.addEventListener("keydown", (event) => {
-            keyPress = event.key;
-            switch (keyPress) {
-                case "b": body.className = "one";
-                break;
-                case "v": body.className = "two";
-                break;
-                case "c": body.className = "three";
-                break;
-                case "f": body.className = "four";
-                break;
-                case "g": body.className = "five";
-                break;
-                default: alert("You pressed the wrong key.");
-            }
-        });
+            document.addEventListener("keydown", (event) => {
+                keyPress = event.key;
+                switch (keyPress) {
+                    case "b": body.className = "one";
+                    break;
+                    case "v": body.className = "two";
+                    break;
+                    case "c": body.className = "three";
+                    break;
+                    case "f": body.className = "four";
+                    break;
+                    case "g": body.className = "five";
+                    break;
+                    default: alert("You pressed the wrong key.");
+                }
+            });
+        })();
         
     </script>
 
