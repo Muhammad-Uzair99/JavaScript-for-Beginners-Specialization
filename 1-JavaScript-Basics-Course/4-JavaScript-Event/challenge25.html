@@ -1,0 +1,47 @@
+<!--
+    For this challenge, add an 
+    additional button that removes the 
+    last paragraph from the div
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>javaScript Event Challenges: Challenge 25</title>
+</head>
+<body>
+    
+    <h1>javaScript Event Challenges: Challenge 25</h1>
+    <div>
+        <p>Here is a paragraph of text.</p>
+        <p>Here is second paragraph of text.</p>
+        <p>Here is third paragraph of text.</p>
+    </div>
+    <button class="add-btn">Add Paragraph!</button>
+    <button class="rmv-btn">Remove Paragraph!</button>
+
+    <script>
+
+        let divEl = document.querySelector("div");
+        let addBtn = document.querySelector(".add-btn");
+        let rmvBtn = document.querySelector(".rmv-btn");
+
+        addBtn.addEventListener("click", () => {
+            let newParaTag = document.createElement("p");
+            let paraText = document.createTextNode("A new paragraph");
+            newParaTag.appendChild(paraText);
+            divEl.appendChild(newParaTag);
+        });
+
+        rmvBtn.addEventListener("click", () => {
+            let allParas = document.querySelectorAll("p");
+            divEl.removeChild(divEl.children[allParas.length - 1]);
+        });
+        
+    </script>
+
+</body>
+</html>

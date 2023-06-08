@@ -1,0 +1,56 @@
+<!--
+    For this challenge, change the first 
+    paragraph so that it says, "This is 
+    paragraph number 1".
+    Each time the user presses the add 
+    paragraph button, the number at 
+    the end of the statement 
+    increments.
+    When the user clicks the remove 
+    paragraph button, it functions as 
+    normal, but alerts the user if they 
+    try to delete the last paragraph
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>javaScript Event Challenges: Challenge 26</title>
+</head>
+<body>
+    
+    <h1>javaScript Event Challenges: Challenge 26</h1>
+    <div>
+        <p>This is paragraph number 1.</p>
+    </div>
+    <button class="add-btn">Add Paragraph!</button>
+    <button class="rmv-btn">Remove Paragraph!</button>
+
+    <script>
+
+        let divEl = document.querySelector("div");
+        let addBtn = document.querySelector(".add-btn");
+        let rmvBtn = document.querySelector(".rmv-btn");
+        let num = 1;
+
+        addBtn.addEventListener("click", () => {
+            let newParaTag = document.createElement("p");
+            let paraText = document.createTextNode(`This is paragraph number ${++num}.`);
+            newParaTag.appendChild(paraText);
+            divEl.appendChild(newParaTag);
+        });
+
+        rmvBtn.addEventListener("click", () => {
+            let allParas = document.querySelectorAll("p");
+            divEl.removeChild(divEl.children[allParas.length - 1]);
+            alert("Deleting The Last Paragraph!");
+            num--;
+        });
+        
+    </script>
+
+</body>
+</html>

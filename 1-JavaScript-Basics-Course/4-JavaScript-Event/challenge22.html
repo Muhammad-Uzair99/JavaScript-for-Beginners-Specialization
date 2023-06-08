@@ -1,0 +1,33 @@
+<!--
+    Make an HTML file with a paragraph and a 
+    button. When you click the button, make the 
+    paragraph turn green.
+    For now put script tags at the bottom of the 
+    page, before the closing body tag
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>javaScript Event Challenges: Challenge 22</title>
+</head>
+<body>
+    
+    <h1>javaScript Event Challenges: Challenge 22</h1>
+    <p>Here is a paragraph of text.</p>
+    <button>Go Green!</button>
+
+    <script>
+
+        let para = document.querySelector("p");
+        let btn = document.querySelector("button");
+
+        btn.addEventListener("click", () => para.style.color = "green");
+        
+    </script>
+
+</body>
+</html>

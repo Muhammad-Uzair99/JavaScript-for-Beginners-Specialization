@@ -1,0 +1,37 @@
+<!--
+    Add a few more paragraphs. When 
+    you click the button, all the 
+    paragraphs turn green
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>javaScript Event Challenges: Challenge 23</title>
+</head>
+<body>
+    
+    <h1>javaScript Event Challenges: Challenge 23</h1>
+    <p>Here is a paragraph of text.</p>
+    <p>Here is second paragraph of text.</p>
+    <p>Here is third paragraph of text.</p>
+    <button>Go Red!</button>
+
+    <script>
+
+        let paraEl = document.querySelectorAll("p");
+        let btn = document.querySelector("button");
+
+        btn.addEventListener("click", () => {
+            for(let para of paraEl) {
+                para.style.color = "red";
+            }
+        });
+        
+    </script>
+
+</body>
+</html>

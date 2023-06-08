@@ -1,0 +1,48 @@
+<!--
+    write a script that when you hover 
+    the mouse over the div, it adds the 
+    class "big".
+    Write a second event handler for 
+    when the mouse goes off the div, it 
+    removes the class "big"
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>javaScript Event Challenges: Challenge 28</title>
+    <style>
+        div {
+            width: 50px;
+            height: 50px;
+            background-color: rgb(255, 0, 0);
+            transition: all 2s;
+        }
+
+        .big {
+            width: 200px;
+            heigth: 200px;
+            background-color: rgb(0, 0, 255);
+            border-radius: 50%;
+            transition: all 2s;
+        }
+    </style>
+</head>
+<body>
+    
+    <h1>javaScript Event Challenges: Challenge 28</h1>
+    <div></div>
+
+    <script>
+
+        let box = document.querySelector("div");
+        box.addEventListener("mouseover", () => box.setAttribute("class", "big"));
+        box.addEventListener("mouseout", () => box.removeAttribute("class"));
+        
+    </script>
+
+</body>
+</html>

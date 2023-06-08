@@ -1,0 +1,56 @@
+<!--
+    Write a script that changes 
+    the class on the body tag 
+    for each 500 pixels the user 
+    scrolls. At 500px down the 
+    page the body gets class 
+    two, and at 1000 it gets 
+    class three, etc.
+
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>javaScript Event Challenges: Challenge 29</title>
+    <style>
+        body { height: 3000px; }
+        .one { background-color:beige; transition: all 3s; }
+        .two { background-color:blueviolet; transition: all 3s; }
+        .three { background-color:coral; transition: all 3s; }
+        .four { background-color:cornflowerblue; transition: all 3s; }
+        .five { background-color:darkgoldenrod; transition: all 3s; }
+    </style>
+</head>
+<body class="one">
+    
+    <h1>javaScript Event Challenges: Challenge 29</h1>
+    <p>Scroll Down!</p>
+
+    <script>
+
+        let scrollPix;
+        let body = document.querySelector("body");
+
+        window.addEventListener("scroll", () => {
+            scrollPix = window.pageYOffset;
+            switch (true) {
+                case scrollPix < 500: body.className = "one";
+                break;
+                case scrollPix < 1000: body.className = "two";
+                break;
+                case scrollPix < 1500: body.className = "three";
+                break;
+                case scrollPix < 2000: body.className = "four";
+                break;
+                dafault: body.className = "five";
+            }
+        });
+        
+    </script>
+
+</body>
+</html>

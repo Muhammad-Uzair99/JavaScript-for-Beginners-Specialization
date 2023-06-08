@@ -1,0 +1,48 @@
+<!--
+    Add a form. When the user submits 
+    a number, change the size of the 
+    font for the h1 to be equal to the 
+    number they submitted in pixels.
+    If no number is entered, or 
+    something other than a number is 
+    entered, alert that the user must 
+    enter a number.
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>javaScript Event Challenges: Challenge 27</title>
+</head>
+<body>
+    
+    <h1>javaScript Event Challenges: Challenge 27</h1>
+    <form action="#" method="get">
+        <label for="number">
+            <input type="text" name="number" id="number" placeholder="Enter a Number here">
+        </label>
+        <button type="submit" id="submit">Submit</button>
+    </form>
+
+    <script>
+
+        let heading = document.querySelector("h1");
+        let subBtn = document.querySelector("#submit");
+
+        subBtn.addEventListener("click", (event) => {
+            event.preventDefault();
+            let num = parseInt(document.querySelector("#number").value);
+            if(num) {
+                heading.style.fontSize = `${num}px`;
+            } else {
+                alert("Please Enter a Positive Number");
+            }
+        });
+        
+    </script>
+
+</body>
+</html>
